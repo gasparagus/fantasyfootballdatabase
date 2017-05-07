@@ -61,5 +61,3 @@ def clean_columns():
 			new_file.insert(0,'year',str(year[0]))
 			# Creates new csv from Data Frame.
 			new_file.to_csv(file_name, index=False)
-			shutil.move('C:\Users\Gary\Documents\\nfl\\all_data_max\\'+file_name,
-				'C:\Users\Gary\Documents\\nfl\\all_data_max\\clean_files\\'+file_name)
