@@ -30,4 +30,7 @@ nflgame.combine_max_stats(nflgame.games(current_year, week=current_nfl_week)).cs
 
 # Run cleanup of columns.
 rc.clean_columns()
-pg.load_table()
+try:
+	pg.load_table()
+except:
+	pass

@@ -18,7 +18,7 @@ columns_to_keep = ['name',
 'defense_tkl',
 'defense_tkl_loss',
 'first_down',
-'fumbles_forced',
+'fumbles_lost',
 'passing_att',
 'passing_cmp',
 'passing_first_down',
@@ -57,6 +57,15 @@ def clean_columns():
 			file_name = str(file)
 			year = file_name.split('_')
 			week = year[1].split('.')
+			# New columns added to store points
+			new_file.insert(2, 'tot_pts', '')
+			new_file.insert(2, 'tot_pts_ppr', '')
+			new_file.insert(2, 'rec_pts', '')
+			new_file.insert(2, 'rush_pts', '')
+			new_file.insert(2, 'pass_pts', '')
+			new_file.insert(2, 'rec_pts_ppr', '')
+			new_file.insert(2, 'rush_pts_ppr', '')
+			new_file.insert(2, 'pass_pts_ppr', '')
 			new_file.insert(0,'week',str(week[0]))
 			new_file.insert(0,'year',str(year[0]))
 			# Creates new csv from Data Frame.
