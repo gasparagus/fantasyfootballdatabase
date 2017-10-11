@@ -41,4 +41,3 @@ def load_table():
 			conn.commit()
 
 
-
